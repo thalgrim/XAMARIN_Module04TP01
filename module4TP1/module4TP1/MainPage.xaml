@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="module4TP1.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <ContentView BackgroundColor="#58B0F0">
+            <StackLayout Orientation="Horizontal" Margin="10, 25">
+                <Label TextColor="Black" Text="Nouveau" VerticalTextAlignment="Center"></Label>
+                <Label TextColor="Black" Text="Accueil" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                <Label TextColor="Black" Text="Rechercher" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+        </ContentView>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="10">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                                <Label Text="Moi" TextColor="Black"></Label>
+                                <Label Text="@moi" TextColor="Black"></Label>
+                                <Label Text="23/06" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                                <Label TextColor="Black" Text="Zone de texte" ></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                        <Label TextColor="Black" Text="Répondre" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                        <Label TextColor="Black" Text="Retweet" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                        <Label TextColor="Black" Text="Favoris" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                        <ContentView HeightRequest="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"></ContentView>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="10" WidthRequest="75" HeightRequest="75">
+                    <Label Text="Fil" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="Notifications" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="Message" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="Moi" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
