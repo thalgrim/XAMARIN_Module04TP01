@@ -9,16 +9,30 @@
     <StackLayout Orientation="Vertical">
         <ContentView BackgroundColor="#58B0F0">
             <StackLayout Orientation="Horizontal" Margin="10, 25">
-                <Label TextColor="Black" Text="Nouveau" VerticalTextAlignment="Center"></Label>
-                <Label TextColor="Black" Text="Accueil" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
-                <Label TextColor="Black" Text="Rechercher" VerticalTextAlignment="Center"></Label>
+                <ImageButton Source="pencil.png" Aspect="AspectFit" WidthRequest="25" BackgroundColor="Transparent"/>
+                <Label TextColor="Black" Text="Accueil" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes ="Bold"></Label>
+                <ImageButton Source="search.png" Aspect="AspectFit" WidthRequest="25" BackgroundColor="Transparent"/>
+            </StackLayout>
+        </ContentView>
+        <ContentView>
+            <StackLayout Orientation="Vertical">
+                <Label Text="Connexion a Twitter" HorizontalOptions="CenterAndExpand"></Label>
+                <Entry Placeholder="Identifiant Twitter" MaxLength="50" Keyboard="Text" ReturnType="Send"/>
+                <Entry Placeholder="Mot de passe" MaxLength="50" Keyboard="Text" ReturnType="Send"/>
+                <StackLayout Orientation="Horizontal">
+                    <Switch></Switch>
+                    <Label Text="Mémoriser mes informations" HorizontalOptions="StartAndExpand"></Label>
+                </StackLayout>
             </StackLayout>
         </ContentView>
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical">
                 <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
-                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+
+                        <ContentView Margin="10" WidthRequest="75" HeightRequest="75">
+                            <Image Source="https://picsum.photos/50/50/?random"></Image>
+                        </ContentView>
                         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="10">
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
                                 <Label Text="Moi" TextColor="Black"></Label>
@@ -31,9 +45,9 @@
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
-                        <Label TextColor="Black" Text="Répondre" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
-                        <Label TextColor="Black" Text="Retweet" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
-                        <Label TextColor="Black" Text="Favoris" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>
+                        <ImageButton Source="reply.png" Aspect="AspectFit" WidthRequest="25" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+                        <ImageButton Source="retweet.png" Aspect="AspectFit" WidthRequest="25" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+                        <ImageButton Source="favorite.png" Aspect="AspectFit" WidthRequest="25" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
                         <ContentView HeightRequest="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"></ContentView>
