@@ -14,18 +14,20 @@
                 <ImageButton Source="search.png" Aspect="AspectFit" WidthRequest="25" BackgroundColor="Transparent"/>
             </StackLayout>
         </ContentView>
-        <ContentView>
+        <ContentView x:Name="connexion" >
             <StackLayout Orientation="Vertical">
+                <Label x:Name="errorMessage" IsVisible="False" TextColor="Red"></Label>
                 <Label Text="Connexion a Twitter" HorizontalOptions="CenterAndExpand"></Label>
-                <Entry Placeholder="Identifiant Twitter" MaxLength="50" Keyboard="Text" ReturnType="Send"/>
-                <Entry Placeholder="Mot de passe" MaxLength="50" Keyboard="Text" ReturnType="Send"/>
+                <Entry x:Name="identifiant" Placeholder="Identifiant Twitter" MaxLength="50" Keyboard="Text" ReturnType="Send"/>
+                <Entry x:Name="motDePasse" Placeholder="Mot de passe" MaxLength="50" Keyboard="Text" ReturnType="Send"/>
                 <StackLayout Orientation="Horizontal">
-                    <Switch></Switch>
+                    <Switch x:Name="memorisation"></Switch>
                     <Label Text="Mémoriser mes informations" HorizontalOptions="StartAndExpand"></Label>
                 </StackLayout>
+                <Button Text="Se connecter" HorizontalOptions="FillAndExpand" Clicked="Connection_Clicked"></Button>
             </StackLayout>
         </ContentView>
-        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ScrollView x:Name="tweets" IsVisible="false" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical">
                 <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
