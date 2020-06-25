@@ -1,4 +1,5 @@
-﻿using System;
+﻿using module4TP1.services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace module4TP1
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        private ITweeterService tweeterService = new TwitterService();
         public MainPage()
         {
             InitializeComponent();
@@ -37,8 +39,20 @@ namespace module4TP1
                 return;
             }
 
-            this.connexion.IsVisible = false;
-            this.tweets.IsVisible = true;
+            if (this.tweeterService.authenticate(utilisateur, mdp))
+            {
+                this.connexion.IsVisible = false;
+                this.tweets.IsVisible = true;
+            }
+            else 
+            {
+                this.errorMessage.Text = "login/mot de passe incorrect";
+                this.errorMessage.IsVisible = true;
+                return;
+            }
+
+
+            
 
         }
     }
