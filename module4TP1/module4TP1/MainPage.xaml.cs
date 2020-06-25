@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace module4TP1
 {
@@ -47,6 +48,13 @@ namespace module4TP1
             else 
             {
                 this.errorMessage.Text = "login/mot de passe incorrect";
+                this.errorMessage.IsVisible = true;
+                return;
+            }
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet) 
+            {
+                this.errorMessage.Text = "Pas d'internet";
                 this.errorMessage.IsVisible = true;
                 return;
             }
